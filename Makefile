@@ -164,6 +164,25 @@ else ifeq ($(PYTHON_VER),python3.8)
          fi
 	@$(ENV_PIP) install $(NAVOPTAPI_WHL)
 	@echo '--- Finished $(NAVOPTAPI_WHL) into virtual-env'
+
+	@$(ENV_PIP) install $(BOTO_PKG)
+	@echo '--- Finished $(BOTO_PKG) into virtual-env'
+
+	@$(ENV_PIP) install $(REQUEST_PKG)
+	@echo '--- Finished $(REQUEST_PKG) into virtual-env'
+
+	@$(ENV_PIP) install $(PYSAML2_PKG)
+	@echo '--- Finished $(PYSAML2_PKG) into virtual-env'
+
+	@$(ENV_PIP) install $(DJANGOSAML2_PKG)
+	@echo '--- Finished $(DJANGOSAML2_PKG) into virtual-env'
+
+	@$(ENV_PIP) install $(DJANGO_AXES_PKG)
+	@echo '--- Finished $(DJANGO_AXES_PKG) into virtual-env'
+
+	@$(ENV_PIP) install $(EVENTLET_PKG)
+	@echo '--- Finished $(EVENTLET_PKG) into virtual-env'
+
 	@touch $(REQUIREMENT_DOT_FILE)
 endif
 
